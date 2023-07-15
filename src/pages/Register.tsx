@@ -1,11 +1,11 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { message } from "antd";
 
 interface UserInput {
   username: string;
   password: string;
   confirmPassword: string;
-  role: string;
 }
 
 const Register = () => {
@@ -18,13 +18,12 @@ const Register = () => {
         JSON.stringify({
           name: values.username,
           password: values.password,
-          role: "user",
         })
       );
-      console.table(values);
       navigate("/login");
+      message.success("Kayıt işlemi başarılı. Şimdi giriş yapabilirsiniz.");
     } else {
-      alert("Girilen Parolalar Uyuşmuyor!");
+      message.error("Girilen Parolalar Uyuşmuyor!");
     }
   };
 

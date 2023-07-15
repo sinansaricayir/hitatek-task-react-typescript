@@ -3,7 +3,9 @@ import Login from "./pages/Login";
 import Homepage from "./pages/Homepage";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
+import Error from "./pages/Error";
+import { products } from "./data/ExampleProducts";
 
 interface IChildren {
   children?: ReactNode | undefined;
@@ -29,6 +31,10 @@ const AdminControl: React.FC<IChildren> = ({ children }) => {
 };
 
 function App() {
+  useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(products));
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -50,6 +56,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,8 +1,9 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { message } from "antd";
 
 interface UserInput {
-  username: string;
+  name: string;
   password: string;
 }
 
@@ -11,12 +12,22 @@ const Login = () => {
   const navigate = useNavigate();
 
   const onSubmitHandler = (values: UserInput) => {
-    localStorage.setItem("user", JSON.stringify(values));
-    if(values.username==="admin" && values.password ==="admin"){
-      navigate("/dashboard")
-    }else{
-      navigate("/homepage")
+    let localUser = localStorage.getItem("user");
+    let loginUser = localUser ? JSON.parse(localUser) : [];
 
+    if (values.name === "admin" && values.password === "admin") {
+      localStorage.setItem("user", JSON.stringify(values));
+      message.success("Giriş işlemi başarılı. Hoşgeldin Admin!");
+      navigate("/dashboard");
+    } else if (
+      loginUser.name == values.name &&
+      loginUser.password == values.password
+    ) {
+      message.success(`Giriş işlemi başarılı. Hoşgeldin ${values.name}`);
+      navigate("/homepage");
+    } else {
+      message.warning("Böyle bir kullanıcı bulunamadı. Öncelikle kayıt olun!");
+      navigate("/register");
     }
   };
 
@@ -47,7 +58,7 @@ const Login = () => {
                   Kullanıcı Adı
                 </label>
                 <input
-                  {...register("username")}
+                  {...register("name")}
                   type="text"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="kullanıcı adınızı giriniz"
