@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# hitatek-task-react-typescript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proje Özeti
 
-## Available Scripts
+Bu dökümantasyon, React ve TypeScript kullanılarak geliştirilen bir yazılım projesinin
+ayrıntılarını içermektedir. Projede Redux Toolkit ve Redux Persist gibi kütüphaneler
+kullanılmıştır. Çoklu dil desteği için i18n paketi entegre edilmiş ve İngilizce ve Türkçe olarak
+çalışmaktadır. Proje, kullanıcıların giriş yapabileceği bir oturum açma ekranıyla başlar.
+Kullanıcılar henüz üye değilse, kayıt bölümünden üye olabilirler ve ardından ana sayfaya
+erişebilirler. Kullanıcılar, ana sayfada sepetlerine ürün ekleyebilirler.
 
-In the project directory, you can run:
+Eklenen ürünler, sağ köşedeki küçük ekranda ve başlıkta bulunan sepet ikonunda görsel
+olarak temsil edilecektir. "admin" kullanıcı adı ve şifre ile giriş yapılması durumunda,
+kullanıcılar yönetici paneline yönlendirilecek ve hem kullanıcı hem de yönetici sayfalarına
+erişim sağlayabileceklerdir. Rotaların korunması için korumalı rotalar kullanılmış ve yönetici
+girişi yaparak yeni ürünler eklenebilir.
 
-### `npm start`
+Kullanılan Teknolojiler
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React: Kullanıcı arayüzü için kullanılan JavaScript kütüphanesi.
+TypeScript: JavaScript'e ek olarak tip güvenliği sağlayan bir programlama dili.
+Redux Toolkit: Redux durum yönetim kütüphanesi. Uygulama durumunun merkezi olarak
+yönetilmesini sağlar.
+Redux Persist: Redux durumunun yerel depoda saklanmasını sağlayan kütüphane.
+i18n: Çoklu dil desteği için kullanılan bir paket.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Proje Ayrıntıları
 
-### `npm test`
+Oturum Açma ve Kayıt Olma
+Kullanıcılar, uygulamaya giriş yapabilmek için oturum açma ekranıyla karşılaşırlar.
+Henüz üye değillerse, kayıt bölümünden yeni bir hesap oluşturabilirler.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ana Sayfa ve Sepet İşlemleri
+Kullanıcılar, başarılı bir giriş yaptıktan sonra ana sayfaya yönlendirilirler.
+Ana sayfada, kullanıcılar sepetlerine ürün ekleyebilirler.
+Eklenen ürünler, sağ köşedeki küçük ekranda ve başlıktaki sepet ikonunda görüntülenir.
 
-### `npm run build`
+Kullanıcı ve Yönetici Sayfaları
+Kullanıcılar, "admin" kullanıcı adı ve şifresi ile giriş yapabilirler.
+"admin" kullanıcısı giriş yaptığında, yönetici paneline yönlendirilir.
+Yönetici paneli, kullanıcının hem kullanıcı hem de yönetici sayfalarına erişim sağlamasını
+sağlar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Korunmalı Rotalar
+Proje içerisinde, yetkisiz erişimi önlemek için korumalı rotalar kullanılmıştır.
+Kullanıcı girişi gerektiren sayfalara erişim, korumalı rotalar kullanılarak sağlanır.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Yeni Ürün Ekleme
+Başlangıç olarak default datalar yüklenecektir.
+Yönetici girişi yapıldığında, yeni ürünler eklenebilir.
+Yönetici panelindeki gerekli formlar doldurularak yeni ürünler kaydedilir.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Proje Kurulumu ve Çalıştırma
+Projeyi herhangi bir metin düzenleyicide, örneğin VS Code'da açarak, terminal ekranında
+npm install komutunu kullanarak gerekli paketleri kurabilirsiniz.
+Ardından, npm start komutunu kullanarak projeyi çalıştırabilirsiniz.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Sonuç
+Bu dökümantasyon, React ve TypeScript kullanılarak geliştirilen projenin ayrıntılarını ve
+kullanılan teknolojileri içermektedir. Projede Redux Toolkit, Redux Persist ve i18n paketi gibi
+önemli araçlar kullanılmıştır. Kullanıcılar, oturum açma, kayıt olma, ürün ekleme ve yönetici
+paneli gibi işlevleri gerçekleştirebilirler. Rotaların korunması ve kullanıcı deneyimi gözetilerek
+geliştirilen bu proje, kullanıcıların ihtiyaçlarını karşılamak için tasarlanmıştır.

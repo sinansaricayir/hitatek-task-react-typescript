@@ -7,7 +7,6 @@ const Homepage = () => {
     <>
       <Header />
       <div className="home px-6 flex md:flex-row flex-col justify-between gap-10 h-screen">
-       
         <div className="products flex-[8]  max-h-[calc(100vh_-_112px)] overflow-y-auto pb-10 min-h-[500px] ">
           <Products />
         </div>

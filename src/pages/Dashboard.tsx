@@ -13,7 +13,7 @@ const Dashboard = () => {
     <>
       <Header />
       <div className="home px-6 flex md:flex-row flex-col justify-between gap-10 h-screen">
-        <div className="categories flex md:flex-col flex-row overflow-auto md:max-h-[calc(100vh_-_112px)] min-h-[125px] pb-10">
+        <div className="addProduct flex md:flex-col flex-row overflow-auto md:max-h-[calc(100vh_-_112px)] min-h-[125px] pb-10">
           <button
             onClick={() => setIsAddModalOpen(true)}
             className="bg-blue-500 p-8 flex flex-col items-center justify-center text-white"

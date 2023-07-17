@@ -7,11 +7,27 @@
     overflow: hidden;
   }
 
-  .categories::-webkit-scrollbar {
+  .addProduct::-webkit-scrollbar {
     display: none;
   }
 
   .products::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 770px) {
+  .header-search {
+    display: none;
+  }
+
+  .addProduct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
     display: none;
   }
 }

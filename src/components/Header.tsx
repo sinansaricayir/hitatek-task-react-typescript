@@ -15,9 +15,11 @@ const Header = () => {
   const cart = useSelector((state: RootState) => state.cartSlice.cart);
   const { t } = useTranslation();
   const { i18n } = useTranslation();
+
   const handleChangeLanguage = (language: string) => {
     i18n.changeLanguage(language);
   };
+
   const logout = () => {
     if (window.confirm(`${t("warning.logout")}`)) {
       localStorage.removeItem("user");
@@ -31,7 +33,7 @@ const Header = () => {
       <header className="py-4 px-6 flex justify-between items-center gap-10">
         <div className="logo">
           <Link to="/dashboard">
-            <h2 className="text-2xl font-bold md:text-4xl">
+            <h2 className="font-bold text-4xl">
               <img src="https://www.hitatek.com/tr/images/logo.png" alt="" />
             </h2>
           </Link>

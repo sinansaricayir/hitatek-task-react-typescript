@@ -42,7 +42,7 @@ const ProductItem: React.FC<IProductItemProps> = ({
         <img
           src={imageUrl}
           alt=""
-          className="h-[200px] w-[200px] object-cover min-w-[150px]"
+          className="h-[200px] w-[200px] min-w-[150px]"
         />
       </div>
       <div className="flex items-center justify-between mx-2 text-2xl my-2 font-bold">
