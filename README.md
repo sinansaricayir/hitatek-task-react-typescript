@@ -1,5 +1,12 @@
 # hitatek-task-react-typescript
 
+Canlı Link = https://hitatek-task-react-typescript.vercel.app
+
+Username = admin   
+Password = admin
+
+
+
 Proje Özeti
 
 Bu dökümantasyon, React ve TypeScript kullanılarak geliştirilen bir yazılım projesinin
