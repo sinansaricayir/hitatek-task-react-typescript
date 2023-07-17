@@ -2,6 +2,7 @@ import { IProduct } from "../interfaces/IProduct";
 
 export const products: IProduct[] = [
   {
+    id: "1",
     categoryName: "Laptop",
     categoryTitle: "Apple Laptops",
     title: "Macbook Air M1",
@@ -10,6 +11,7 @@ export const products: IProduct[] = [
     price: 32000,
   },
   {
+    id: "2",
     categoryName: "Phone",
     categoryTitle: "Apple Phones",
     title: "İphone 12 Pro",
@@ -18,6 +20,7 @@ export const products: IProduct[] = [
     price: 28000,
   },
   {
+    id: "3",
     categoryName: "Phone",
     categoryTitle: "Samsung Phones",
     title: "Samsung A7 2022",

@@ -24,10 +24,16 @@ const Login = () => {
       loginUser.password == values.password
     ) {
       message.success(`Giriş işlemi başarılı. Hoşgeldin ${values.name}`);
-      navigate("/homepage");
-    } else {
+      navigate("/");
+    } else if (loginUser.name == null || loginUser.password == null) {
       message.warning("Böyle bir kullanıcı bulunamadı. Öncelikle kayıt olun!");
       navigate("/register");
+    } else if (
+      loginUser.name != values.name ||
+      loginUser.password != values.password
+    ) {
+      message.error("Giriş bilgileri hatalı girildi. Lütfen tekrar deneyiniz.");
+      navigate("/login");
     }
   };
 

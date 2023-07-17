@@ -11,9 +11,9 @@ const Homepage = () => {
         <div className="categories flex md:flex-col flex-row overflow-auto md:max-h-[calc(100vh_-_112px)] min-h-[125px] pb-10">
           <Categories name="Tümü" />
           <Categories name="Laptop" />
-          <Categories name="Telefon"/>
+          <Categories name="Telefon" />
         </div>
-        <div className="products flex-[8] max-h-[calc(100vh_-_112px)] overflow-y-auto pb-10 min-h-[500px] ">
+        <div className="products flex-[8]  max-h-[calc(100vh_-_112px)] overflow-y-auto pb-10 min-h-[500px] ">
           <Products />
         </div>
         <div className="cart-totals min-w-[300px] md:-mr-[24px] md:-mt-[24px] md:pb-0 pb-12 border">

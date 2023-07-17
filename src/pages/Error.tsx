@@ -12,7 +12,7 @@ const Error: React.FC = () => {
       subTitle="Üzgünüz, aradığınız sayfa bulunmamaktadır!"
       extra={
         <Button
-          onClick={() => navigate("/homepage")}
+          onClick={() => navigate("/")}
           type="primary"
           className="bg-blue-500"
         >

@@ -6,9 +6,12 @@ import {
   ShoppingCartOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 const Header = () => {
   const navigate = useNavigate();
+  const cart = useSelector((state: RootState) => state.cartSlice.cart);
 
   const logout = () => {
     if (window.confirm("Çıkış yapmak istediğinize emin misiniz?")) {
@@ -37,14 +40,11 @@ const Header = () => {
           />
         </div>
         <div className="flex justify-content items-center gap-8">
-          <Link
-            to="/homepage"
-            className="flex flex-col items-center justify-center"
-          >
+          <Link to="/" className="flex flex-col items-center justify-center">
             <HomeOutlined className="md:text-2xl text-xl" />
             <span className="md:text-xs text-[10px]">Anasayfa</span>
           </Link>
-          <Badge count={1} offset={[0, 0]}>
+          <Badge count={cart.length} offset={[0, 0]}>
             <Link
               to="/cart"
               className="flex flex-col items-center justify-center"

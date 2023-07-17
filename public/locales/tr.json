@@ -1,0 +1,10 @@
+{
+  "cart": {
+    "title": "Alışveriş Sepeti",
+    "add": "Sepete Ekle",
+    "increment": "Miktarı Artır",
+    "decrement": "Miktarı Azalt",
+    "remove": "Ürünü Kaldır",
+    "allRemove": "Tüm Ürünleri Kaldır"
+  }
+}
