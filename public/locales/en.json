@@ -1,10 +1,41 @@
 {
-  "cart": {
-    "title": "Shopping Cart",
-    "add": "Add to Cart",
-    "increment": "Increment Quantity",
-    "decrement": "Decrement Quantity",
-    "remove": "Remove Item",
-    "allRemove": "Remove All Items"
+  "card": {
+    "title": "Items in Cart",
+    "noData": "There are no items in the cart...",
+    "total": "Grand Total",
+    "order": "Create Order",
+    "remove": "Delete"
+  },
+  "header": {
+    "homepage": "homepage",
+    "basket": "Basket",
+    "logout": "Logout"
+  },
+  "product": {
+    "add": "Add Product"
+  },
+  "warning": {
+    "logout": "Are you sure you want to log out?",
+    "logoutMessage": "Logout successful.",
+    "order": "Your order has been received.",
+    "remove": "Are you sure you want to delete all items in the cart?",
+    "removeSuccess": "Deletion successful."
+  },
+  "auth": {
+    "username": "Username",
+    "inpUsername": "input username",
+    "password": "Password",
+    "againPassword": "Password Again",
+    "inpPassword": "enter your password",
+    "login": "Login",
+    "noAccount": "Don't have an account?",
+    "account": "Do you have an account?",
+    "register": "Register",
+    "welcomeAdmin": "Login successful. Welcome Admin!",
+    "welcomeUser": "Login successful. Welcome ",
+    "noUser": "No such user found. Register first!",
+    "wrongLogin": "Incorrect login information. Please try again.",
+    "nowAccess": "Registration successful. You can login now.",
+    "notMatchedPassword": "Passwords Entered Do Not Match!"
   }
 }

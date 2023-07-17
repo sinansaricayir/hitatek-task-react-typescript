@@ -9,7 +9,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    debug: true, // Geliştirme için hata ayıklama modunu etkinleştirin
+    debug: false, // Geliştirme için hata ayıklama modunu etkinleştirin
     backend: {
       loadPath: "/locales/{{lng}}.json", // Doğru JSON dosya yolunu burada belirtin
     },

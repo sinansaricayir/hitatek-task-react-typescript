@@ -1,10 +1,41 @@
 {
-  "cart": {
-    "title": "Alışveriş Sepeti",
-    "add": "Sepete Ekle",
-    "increment": "Miktarı Artır",
-    "decrement": "Miktarı Azalt",
-    "remove": "Ürünü Kaldır",
-    "allRemove": "Tüm Ürünleri Kaldır"
+  "card": {
+    "title": "Sepetteki Ürünler",
+    "noData": "Sepette ürün yok...",
+    "total": "Genel Toplam",
+    "order": "Sipariş Oluştur",
+    "remove": "Sil"
+  },
+  "header": {
+    "homepage": "Anasayfa",
+    "basket": "Sepet",
+    "logout": "Çıkış"
+  },
+  "product": {
+    "add": "Ürün Ekle"
+  },
+  "warning": {
+    "logout": "Çıkış yapmak istediğinize emin misiniz?",
+    "logoutMessage": "Çıkış işlemi başarılı.",
+    "order": "Siparişiniz alındı.",
+    "remove": "Sepetteki tüm ürünleri silmek istediğinize emin misiniz?",
+    "removeSuccess": "Silme işlemi başarılı."
+  },
+  "auth": {
+    "username": "Kullanıcı Adı",
+    "inpUsername": "kullanıcı adı giriniz",
+    "password": "Parola",
+    "againPassword": "Tekrar Parola",
+    "inpPassword": "parolanızı giriniz",
+    "login": "Giriş Yapın",
+    "noAccount": "Hesabın yok mu?",
+    "account": "Hesabın var mı?",
+    "register": "Kayıt Ol",
+    "welcomeAdmin": "Giriş işlemi başarılı. Hoşgeldin Admin!",
+    "welcomeUser": "Giriş işlemi başarılı. Hoşgeldin ",
+    "noUser": "Böyle bir kullanıcı bulunamadı. Öncelikle kayıt olun!",
+    "wrongLogin": "Giriş bilgileri hatalı girildi. Lütfen tekrar deneyiniz.",
+    "nowAccess": "Kayıt işlemi başarılı. Şimdi giriş yapabilirsiniz.",
+    "notMatchedPassword": "Girilen Parolalar Uyuşmuyor!"
   }
 }

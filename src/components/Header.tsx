@@ -8,16 +8,21 @@ import {
 } from "@ant-design/icons";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const navigate = useNavigate();
   const cart = useSelector((state: RootState) => state.cartSlice.cart);
-
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const handleChangeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  };
   const logout = () => {
-    if (window.confirm("Çıkış yapmak istediğinize emin misiniz?")) {
+    if (window.confirm(`${t("warning.logout")}`)) {
       localStorage.removeItem("user");
       navigate("/login");
-      message.success("Çıkış işlemi başarılı.");
+      message.success(`${t("warning.logoutMessage")}`);
     }
   };
 
@@ -39,18 +44,33 @@ const Header = () => {
             className="rounded-full max-w-[auto]"
           />
         </div>
+        <div className="flex items-center justify-center gap-2">
+          <img
+            onClick={() => handleChangeLanguage("tr")}
+            src="https://www.hitatek.com/en/images/tr.png"
+            alt=""
+            className="h-8 w-8 hover:scale-125 transition-all duration-300"
+          />
+          <img
+            onClick={() => handleChangeLanguage("en")}
+            src="https://www.hitatek.com/en/images/en.png"
+            alt=""
+            className="h-8 w-8 hover:scale-125 transition-all duration-300"
+          />
+        </div>
         <div className="flex justify-content items-center gap-8">
           <Link to="/" className="flex flex-col items-center justify-center">
             <HomeOutlined className="md:text-2xl text-xl" />
-            <span className="md:text-xs text-[10px]">Anasayfa</span>
+            <span className="md:text-xs text-[10px]">
+              {t("header.homepage")}
+            </span>
           </Link>
           <Badge count={cart.length} offset={[0, 0]}>
-            <Link
-              to="/cart"
-              className="flex flex-col items-center justify-center"
-            >
+            <Link to="#" className="flex flex-col items-center justify-center">
               <ShoppingCartOutlined className="md:text-2xl text-xl" />
-              <span className="md:text-xs text-[10px]">Sepet</span>
+              <span className="md:text-xs text-[10px]">
+                {t("header.basket")}
+              </span>
             </Link>
           </Badge>
           <div
@@ -58,7 +78,7 @@ const Header = () => {
             className="flex flex-col items-center justify-center cursor-pointer hover:text-red-500"
           >
             <LogoutOutlined className="md:text-2xl text-xl" />
-            <span className="md:text-xs text-[10px]">Çıkış</span>
+            <span className="md:text-xs text-[10px]">{t("header.logout")}</span>
           </div>
         </div>
       </header>

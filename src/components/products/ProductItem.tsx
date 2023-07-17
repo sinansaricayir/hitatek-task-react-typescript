@@ -2,7 +2,7 @@ import { CiHeart } from "react-icons/ci";
 import { GoGitCompare } from "react-icons/go";
 import { MdOutlineShoppingCartCheckout } from "react-icons/md";
 import { IProductItemProps } from "../../interfaces/IProductItemProps";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 
 const ProductItem: React.FC<IProductItemProps> = ({
@@ -41,6 +41,7 @@ const ProductItem: React.FC<IProductItemProps> = ({
       <div className="product-image">
         <img
           src={imageUrl}
+          alt=""
           className="h-[200px] w-[200px] object-cover min-w-[150px]"
         />
       </div>
